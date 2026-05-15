@@ -1,6 +1,6 @@
 #  Sistema Académico UTA — Árboles Binarios de Búsqueda (BST)
 
-Este proyecto es una implementación práctica para la **Universidad Técnica de Ambato** que gestiona registros de estudiantes mediante una estructura de datos de **Árbol Binario de Búsqueda (BST)**, desarrollada bajo el paradigma de **Programación Orientada a Objetos (POO)** en Java y su equivalente funcional en C++.
+Este proyecto es una implementación práctica para la **Universidad Técnica de Ambato** que gestiona registros de estudiantes mediante una estructura de datos de **Árbol Binario de Búsqueda (BST)**, desarrollada bajo el paradigma de **Programación Orientada a Objetos (POO)** en Java.
 
 ---
 
@@ -30,8 +30,6 @@ prueba-practica-arboles-cpp-java/
 │   ├── Menu.java            # Interfaz de usuario y validaciones
 │   └── Main.java            # Punto de entrada y precarga de datos
 │
-├── cpp/
-│   └── sistema.cpp          # Implementación equivalente en C++
 │
 └── README.md                # Documentación del proyecto
 ```
