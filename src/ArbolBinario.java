@@ -46,7 +46,7 @@ public class ArbolBinario {
     private NodoArbol insertarRecursivo(NodoArbol nodo, Estudiante estudiante) {
         // Caso base: posición vacía → crear nuevo nodo
         if (nodo == null) {
-            System.out.println("✔ Estudiante insertado correctamente.");
+            System.out.println("[OK] Estudiante insertado correctamente.");
             return new NodoArbol(estudiante);
         }
  
@@ -60,7 +60,7 @@ public class ArbolBinario {
             nodo.setHijoDer(insertarRecursivo(nodo.getHijoDer(), estudiante));
         } else {
             // Cédula duplicada
-            System.out.println("⚠ Ya existe un estudiante con esa cédula.");
+            System.out.println("[ADVERTENCIA] Ya existe un estudiante con esa cédula.");
         }
  
         return nodo;
@@ -111,11 +111,11 @@ public class ArbolBinario {
      */
     public void eliminarEstudiante(String cedula) {
         if (buscarEstudiante(cedula) == null) {
-            System.out.println("⚠ No se encontró un estudiante con esa cédula.");
+            System.out.println("[ADVERTENCIA] No se encontró un estudiante con esa cédula.");
             return;
         }
         raiz = eliminarRecursivo(raiz, cedula);
-        System.out.println("✔ Estudiante eliminado correctamente.");
+        System.out.println("[OK] Estudiante eliminado correctamente.");
     }
  
     /**

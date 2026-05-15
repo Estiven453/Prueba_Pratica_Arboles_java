@@ -85,7 +85,7 @@ public class Estudiante {
             "└─────────────────────────────────────────┘",
             cedula, nombres, apellidos, carrera, nivel,
             String.format("%.2f", notaFinal),
-            estaAprobado() ? "APROBADO ✓" : "REPROBADO ✗"
+            estaAprobado() ? "APROBADO" : "REPROBADO"
         );
     }
 }

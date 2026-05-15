@@ -39,7 +39,7 @@ public class Menu {
     /** Imprime el encabezado y las 14 opciones del menú. */
     private void mostrarEncabezado() {
         System.out.println("\n╔══════════════════════════════════════════════╗");
-        System.out.println("║   SISTEMA ACADÉMICO UTA — Árbol BST          ║");
+        System.out.println("║   SISTEMA ACADÉMICO UTA - Árbol BST          ║");
         System.out.println("╠══════════════════════════════════════════════╣");
         System.out.println("║  1.  Insertar estudiante                     ║");
         System.out.println("║  2.  Buscar estudiante por cédula            ║");
@@ -81,7 +81,7 @@ public class Menu {
             case 12 -> arbol.mostrarAprobados();
             case 13 -> arbol.mostrarReprobados();
             case 14 -> System.out.println("\n  ¡Hasta luego!");
-            default -> System.out.println("\n  ⚠ Opción no válida. Ingrese un número del 1 al 14.");
+            default -> System.out.println("\n   Opción no válida. Ingrese un número del 1 al 14.");
         }
     }
  
@@ -96,7 +96,7 @@ public class Menu {
  
         // Validar que la cédula no esté vacía
         if (cedula.isEmpty()) {
-            System.out.println("  ⚠ La cédula no puede estar vacía.");
+            System.out.println("  La cédula no puede estar vacía.");
             return;
         }
  
@@ -126,10 +126,10 @@ public class Menu {
  
         Estudiante encontrado = arbol.buscarEstudiante(cedula);
         if (encontrado != null) {
-            System.out.println("\n  ✔ Estudiante encontrado:");
+            System.out.println("\n   Estudiante encontrado:");
             System.out.println(encontrado);
         } else {
-            System.out.println("  ⚠ No se encontró un estudiante con esa cédula.");
+            System.out.println("   No se encontró un estudiante con esa cédula.");
         }
     }
  
@@ -145,7 +145,7 @@ public class Menu {
     private void opcionMayorNota() {
         Estudiante mayor = arbol.buscarNotaMayor();
         if (mayor != null) {
-            System.out.println("\n  ✔ Estudiante con mayor nota:");
+            System.out.println("\n   Estudiante con mayor nota:");
             System.out.println(mayor);
         } else {
             System.out.println("  El árbol está vacío.");
@@ -156,7 +156,7 @@ public class Menu {
     private void opcionMenorNota() {
         Estudiante menor = arbol.buscarNotaMenor();
         if (menor != null) {
-            System.out.println("\n  ✔ Estudiante con menor nota:");
+            System.out.println("\n  Estudiante con menor nota:");
             System.out.println(menor);
         } else {
             System.out.println("  El árbol está vacío.");
@@ -176,7 +176,7 @@ public class Menu {
                 int opcion = Integer.parseInt(scanner.nextLine().trim());
                 return opcion;
             } catch (NumberFormatException e) {
-                System.out.print("  ⚠ Ingrese un número válido: ");
+                System.out.print("   Ingrese un número válido: ");
             }
         }
     }
@@ -192,12 +192,12 @@ public class Menu {
                 System.out.print("  Nota final (0.0 – 10.0): ");
                 double nota = Double.parseDouble(scanner.nextLine().trim());
                 if (nota < 0.0 || nota > 10.0) {
-                    System.out.println("  ⚠ La nota debe estar entre 0.0 y 10.0.");
+                    System.out.println("   La nota debe estar entre 0.0 y 10.0.");
                 } else {
                     return nota;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("  ⚠ Ingrese un número decimal válido (use punto, no coma).");
+                System.out.println("   Ingrese un número decimal válido (use punto, no coma).");
             }
         }
     }
